@@ -1,5 +1,6 @@
 import './App.css'
 import { Counter } from './components/Counter'
+import { OnlineStatusBar } from './components/OnlineStatusBar'
 import { SaveButton } from './components/SaveButton'
 import { StatusBar } from './components/StatusBar'
 
@@ -14,6 +15,7 @@ export const App = () => {
       <Counter/>
       <StatusBar/>
       <SaveButton/>
+      <OnlineStatusBar/>
     </>
   )
 }
