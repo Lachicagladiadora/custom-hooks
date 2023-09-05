@@ -1,7 +1,7 @@
 import { SetStateAction, useState } from "react"
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const useFormInput = (initialValue: any) => {
+const useFormInput = (initialValue: any) => {
   const  [value, setValue] = useState(initialValue)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
   const onChange=(e: { target: { value: any } })=>setValue(e.target.value)
