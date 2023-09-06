@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-// 
+// component with custom hook
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const useOnlineStatus=()=>{
