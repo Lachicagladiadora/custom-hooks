@@ -14,14 +14,14 @@ const useFormInput = (initialValue: any) => {
 
 
 export const FormComponent = () => {
-  // first form
+  // first method
   const [firstName, setFirstName] = useState('Petter')
   const [lastName, setLastName] = useState('Parker')
 
   const onChangeFirstName=(e: { target: { value: SetStateAction<string> } })=> setFirstName(e.target.value)
   const onChangeLastName=(e: { target: { value: SetStateAction<string> } })=> setLastName(e.target.value)
 
-  // second form
+  // second method
   const firstNameProps = useFormInput('Clark')
   const lastNameProps = useFormInput('Kent')
 

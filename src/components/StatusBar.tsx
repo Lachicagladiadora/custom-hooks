@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+// first example with state and useEffect 
 export const StatusBar = () => {
   const [isOnline, setIsOnline] = useState(true)
   useEffect(()=>{

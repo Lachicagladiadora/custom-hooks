@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+// first custom hook
 export const Counter = () => {
   const useCounter = () => {
     const [counter, setCounter] = useState(0)
