@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react"
 import Toastify from "toastify-js"
 
+type ChatRoomProps = {roomId: string}
+
+type createConnectionProps = {serverUrl: string, roomId: string}
+
 const showNotification = (message: string) => {
   Toastify({
     text: message,
@@ -23,7 +27,7 @@ const showNotification = (message: string) => {
   }).showToast()
 }
 
-const createConnection = ({serverUrl,roomId}) => {
+const createConnection = ({serverUrl,roomId}: createConnectionProps) => {
   if(typeof serverUrl !== 'string'){
     throw Error('Expected serverUrl to be a string. Received: ' + serverUrl)
   }
@@ -63,7 +67,7 @@ const createConnection = ({serverUrl,roomId}) => {
   }
 }
 
-export const ChatRoom = ({roomId}) => {
+export const ChatRoom = ({roomId}:ChatRoomProps) => {
   const [serverUrl, setServerUrl] = useState('https://localhost:1234')
 
   useEffect(()=>{
