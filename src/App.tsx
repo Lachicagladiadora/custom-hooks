@@ -26,29 +26,9 @@ export const App = () => {
         <StatusBar/>
         <SaveButton/>
       </div>
-      
+
       <OnlineStatusBar/>
       <FormComponent/>
-<<<<<<< HEAD
-=======
-      <div style={{
-        border: 'solid 2px green',
-        borderRadius: '5px',
-        padding: '10px',
-      }}>
-        <h3>Passing event handlers to custom Hooks </h3>
-        <label>
-          Choose the chat room: {' '}
-          <select value={roomId} onChange={e=>setRoomId(e.target.value)}>
-            <option value="general">general</option>
-            <option value="travel">travel</option>
-            <option value="music">music</option>
-          </select>
-        </label>
-        <hr/>
-        <ChatRoom roomId={roomId}/>
-      </div>
->>>>>>> refs/remotes/origin/main
     </>
   )
 }
