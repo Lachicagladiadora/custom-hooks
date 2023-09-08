@@ -13,15 +13,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -39,7 +30,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #fafb8b;
 }
 button:focus,
 button:focus-visible {

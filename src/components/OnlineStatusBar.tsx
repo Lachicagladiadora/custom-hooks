@@ -19,18 +19,21 @@ export const useOnlineStatus=()=>{
 }
 
 export const OnlineStatusBar = () => {
-  const StateBar=()=>{
-    const isOnline = useOnlineStatus()
-    return <p>{isOnline ? '✅ Online' : '❌ Disconnected'}</p>
-  }
 
-  const SaveButtonState=()=>{
+  type StateBarProps = {color: string, children: string}
+  const StateBar=({color,children}: StateBarProps)=>{
+    // const isOnline = useOnlineStatus()
+    return <p style={{color:color}}>{children}</p>
+  }
+  
+  type SaveButtonStateProps={background:string}
+  const SaveButtonState=({background}:SaveButtonStateProps)=>{
     const isOnline  = useOnlineStatus()
     const onSaveClick = () => {
       console.log('✅ Progress saved')
     }
     return (
-      <button disabled={!isOnline} onClick={onSaveClick}>
+      <button disabled={!isOnline} onClick={onSaveClick} style={{background:background,color:'#fafb8b'}}>
         {isOnline ? 'Save progress' : 'Reconnecting...'}
       </button>
     )
@@ -51,9 +54,9 @@ export const OnlineStatusBar = () => {
       justifyContent: 'center',
     }}
     >
-      <p>OnlineStatusBar: first custom hook</p>
-      <SaveButtonState/>
-      <StateBar/>
+      <p>OnlineStatusBar: second custom hook</p>
+      <SaveButtonState background={`${useOnlineStatus() ? 'green' : 'red'}`}/>
+      <StateBar color={`${useOnlineStatus() ? 'green' : 'red'}`}>{useOnlineStatus() ? '✅ Online' : '❌ Disconnected'}</StateBar>
     </div>
   )
 }

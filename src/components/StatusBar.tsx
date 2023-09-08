@@ -10,5 +10,19 @@ export const StatusBar = () => {
     window.addEventListener('offline', handleOffline)
   }, [])
 
-  return <h3>{isOnline ? '✅ Online' : '❌ Disconnected'}</h3>
+  return (
+    <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+    >
+      <h3>component: StatusBar</h3>
+      <h3 style={{color: `${isOnline ? 'green' : 'red'}`}}>
+        {isOnline ? '✅ Online' : '❌ Disconnected'}
+      </h3>
+    </div>
+  )
 }

@@ -18,8 +18,18 @@ export const SaveButton = () => {
   const saveClick = () => console.log('✅ Progress saved')
 
   return (
-    <button disabled={!isOnline} onClick={saveClick}>
-      {isOnline ? 'Save progress' : 'Reconnecting...'}
-    </button>
+    <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+    >
+      <h3>component: SaveButton</h3>
+      <button disabled={!isOnline} onClick={saveClick} style={{background:`${!isOnline ? 'red' : 'green'}`,color:'#fafb8b'}}>
+        {isOnline ? 'Save progress' : 'Reconnecting...'}
+      </button>
+    </div>
   )
 }
