@@ -22,7 +22,6 @@ export const OnlineStatusBar = () => {
 
   type StateBarProps = {color: string, children: string}
   const StateBar=({color,children}: StateBarProps)=>{
-    // const isOnline = useOnlineStatus()
     return <p style={{color:color}}>{children}</p>
   }
   
